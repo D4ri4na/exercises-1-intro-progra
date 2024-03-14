@@ -131,7 +131,57 @@ void exercise_7(double r) {
 }
 
 void exercise_8(long int seconds) {
-  // TODO: YOUR CODE HERE
+  long int hours = seconds/3600;
+  long int minutes = (seconds - (hours * 3600))/60;
+  long int secondss = seconds - (hours * 3600) -(minutes * 60);
+  if (hours==0)
+  {
+    cout<<00<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  if (hours==0)
+  {
+    cout<<00<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==1)
+  {
+    cout<<01<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==2)
+  {
+    cout<<02<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==3)
+  {
+    cout<<03<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==4)
+  {
+    cout<<04<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==5)
+  {
+    cout<<05<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==6)
+  {
+    cout<<06<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==7)
+  {
+    cout<<07<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==8)
+  {
+    cout<<08<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours==9)
+  {
+    cout<<09<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else
+  {
+    cout<<hours<<":"<<minutes<<":"<<secondss<<endl;
+  }
 }
 
 string exercise_9(string s1, string s2, string s3, string s4, string s5) {
