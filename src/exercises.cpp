@@ -136,47 +136,43 @@ void exercise_8(long int seconds) {
   long int secondss = seconds - (hours * 3600) -(minutes * 60);
   if (hours==0)
   {
-    cout<<00<<":"<<minutes<<":"<<secondss<<endl;
-  }
-  if (hours==0)
-  {
-    cout<<00<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"00:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==1)
   {
-    cout<<01<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"01:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==2)
   {
-    cout<<02<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"02:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==3)
   {
-    cout<<03<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"03:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==4)
   {
-    cout<<04<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"04:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==5)
   {
-    cout<<05<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"05:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==6)
   {
-    cout<<06<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"06:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==7)
   {
-    cout<<07<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"07:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==8)
   {
-    cout<<08<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"08:"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours==9)
   {
-    cout<<09<<":"<<minutes<<":"<<secondss<<endl;
+    cout<<"09:"<<minutes<<":"<<secondss<<endl;
   }
   else
   {
