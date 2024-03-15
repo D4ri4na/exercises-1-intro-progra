@@ -151,7 +151,7 @@ void exercise_8(long int seconds) {
     cout<<"0"<<hours<<":0"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours<10 && minutes>=10 && secondss>=10) //4
-  {
+  {                             
     cout<<"0"<<hours<<":"<<minutes<<":"<<secondss<<endl;
   }
   else if (hours>=10 && minutes>=10 && secondss>=10) //5
