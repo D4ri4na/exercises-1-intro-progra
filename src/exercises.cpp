@@ -134,49 +134,40 @@ void exercise_8(long int seconds) {
   long int hours = seconds/3600;
   long int minutes = (seconds - (hours * 3600))/60;
   long int secondss = seconds - (hours * 3600) -(minutes * 60);
-  if (hours==0)
+  if (hours<10 && minutes<10 && secondss<10) //1
   {
-    cout<<"00:"<<minutes<<":"<<secondss<<endl;
+    cout<<"0"<<hours<<":0"<<minutes<<":0"<<secondss<<endl;
   }
-  else if (hours==1)
+   else if (hours<10 && minutes>=10 && secondss<10) //2
   {
-    cout<<"01:"<<minutes<<":"<<secondss<<endl;
-  }
-  else if (hours==2)
+    cout<<"0"<<hours<<":"<<minutes<<":0"<<secondss<<endl;
+  else if (hours<10 && minutes<10 && secondss>=10) //3
   {
-    cout<<"02:"<<minutes<<":"<<secondss<<endl;
+    cout<<"0"<<hours<<":0"<<minutes<<":"<<secondss<<endl;
   }
-  else if (hours==3)
+  else if (hours<10 && minutes>=10 && secondss>=10) //4
   {
-    cout<<"03:"<<minutes<<":"<<secondss<<endl;
+    cout<<"0"<<hours<<":"<<minutes<<":"<<secondss<<endl;
   }
-  else if (hours==4)
-  {
-    cout<<"04:"<<minutes<<":"<<secondss<<endl;
-  }
-  else if (hours==5)
-  {
-    cout<<"05:"<<minutes<<":"<<secondss<<endl;
-  }
-  else if (hours==6)
-  {
-    cout<<"06:"<<minutes<<":"<<secondss<<endl;
-  }
-  else if (hours==7)
-  {
-    cout<<"07:"<<minutes<<":"<<secondss<<endl;
-  }
-  else if (hours==8)
-  {
-    cout<<"08:"<<minutes<<":"<<secondss<<endl;
-  }
-  else if (hours==9)
-  {
-    cout<<"09:"<<minutes<<":"<<secondss<<endl;
-  }
-  else
+  else if (hours>=10 && minutes>=10 && secondss>=10) //5
   {
     cout<<hours<<":"<<minutes<<":"<<secondss<<endl;
+  }
+  else if (hours>=10 && minutes<10 && secondss<10) //6
+  {
+    cout<<hours<<":0"<<minutes<<":0"<<secondss<<endl;
+  }
+  else if (hours>=10 && minutes>=10 && secondss<10) //7
+  {
+    cout<<hours<<":"<<minutes<<":0"<<secondss<<endl;
+  }
+  else if (hours>=10 && minutes>10 && secondss<10) //8
+  {
+    cout<<hours<<":0"<<minutes<<":"<<secondss<<endl;
+  }
+  else 
+  {
+    cout<<"Error: Input seconds cannot be negative."<<endl;
   }
 }
 
@@ -243,7 +234,8 @@ string exercise_14(int number_of_docs) {
   // TODO: YOUR CODE HERE
    if(number_of_docs>=2)
   {
-    cout<<<<number_of_docs<<" documentos encontrados.";
+    cout<<<<number_of_docs;
+    return" documentos encontrados.";
   }
   else if (number_of_docs==1)
   {
