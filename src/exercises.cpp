@@ -186,9 +186,21 @@ string exercise_9(string s1, string s2, string s3, string s4, string s5) {
   return"";
 }
 
-//int exercise_10(int a, int b) {
+int exercise_10(int a, int b) {
   // TODO: YOUR CODE HERE
-//}
+  int suma = a+b ;
+  string multiplicador = to_string(suma);
+  int mult = multiplicador.size();
+  int resultado = suma*mult;
+  if (a>0 && b>0) {
+    cout<<resultado;
+  }
+  else
+   {
+    cout<<"0";
+  }
+
+}
 
 string exercise_11(int number) {
   // TODO: YOUR CODE HERE
