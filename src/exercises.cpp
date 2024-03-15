@@ -141,6 +141,7 @@ void exercise_8(long int seconds) {
    else if (hours<10 && minutes>=10 && secondss<10) //2
   {
     cout<<"0"<<hours<<":"<<minutes<<":0"<<secondss<<endl;
+  } 
   else if (hours<10 && minutes<10 && secondss>=10) //3
   {
     cout<<"0"<<hours<<":0"<<minutes<<":"<<secondss<<endl;
@@ -184,9 +185,9 @@ string exercise_9(string s1, string s2, string s3, string s4, string s5) {
   return"";
 }
 
-int exercise_10(int a, int b) {
+//int exercise_10(int a, int b) {
   // TODO: YOUR CODE HERE
-}
+//}
 
 string exercise_11(int number) {
   // TODO: YOUR CODE HERE
@@ -234,7 +235,7 @@ string exercise_14(int number_of_docs) {
   // TODO: YOUR CODE HERE
    if(number_of_docs>=2)
   {
-    cout<<<<number_of_docs;
+    cout<<number_of_docs;
     return" documentos encontrados.";
   }
   else if (number_of_docs==1)
