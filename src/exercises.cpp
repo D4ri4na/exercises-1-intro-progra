@@ -184,12 +184,13 @@ string exercise_9(string s1, string s2, string s3, string s4, string s5) {
   // TODO: YOUR CODE HERE
   if (s1==s5)
   {
-    return<<"Hemos encontrado algo!";
+    cout<<"Hemos encontrado algo!";
   }  
   else
   {
-    return<<"Aun sin suerte";
+    cout<<"Aun sin suerte";
   } 
+  return"";
 }
 
 int exercise_10(int a, int b) {
@@ -222,19 +223,19 @@ string exercise_13(int age, int years_of_experience) {
   cin >> years_of_experience;
   if (age>=18 && years_of_experience>=5)
   {
-    return<<"Senior project manager";
+    return"Senior project manager";
   } 
   else if (age>=18 && years_of_experience>=3)
   {
-    return<<"Project manager";
+    return"Project manager";
   } 
   else if (age>=18)
   {
-    return<<"Project coordinator";
+    return"Project coordinator";
   } 
   else
   {
-    return<<"Not eligible";
+    return"Not eligible";
   } 
 }
 
@@ -242,15 +243,15 @@ string exercise_14(int number_of_docs) {
   // TODO: YOUR CODE HERE
    if(number_of_docs>=2)
   {
-    return<<number_of_docs<<" documentos encontrados.";
+    cout<<<<number_of_docs<<" documentos encontrados.";
   }
   else if (number_of_docs==1)
   {
-    return<<"Se encontro un documento";
+    return"Se encontro un documento";
   }
   else
   {
-    return<<"No se encontraron documentos";
+    return"No se encontraron documentos";
   }
 }
 
