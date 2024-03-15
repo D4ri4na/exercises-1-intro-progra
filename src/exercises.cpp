@@ -134,7 +134,11 @@ void exercise_8(long int seconds) {
   long int hours = seconds/3600;
   long int minutes = (seconds - (hours * 3600))/60;
   long int secondss = seconds - (hours * 3600) -(minutes * 60);
-  if (hours<10 && minutes<10 && secondss<10) //1
+  if (seconds<0)
+  {
+    cout<<"Error: Input seconds cannot be negative."<<endl;
+  }
+  else if (hours<10 && minutes<10 && secondss<10) //1
   {
     cout<<"0"<<hours<<":0"<<minutes<<":0"<<secondss<<endl;
   }
@@ -166,10 +170,7 @@ void exercise_8(long int seconds) {
   {
     cout<<hours<<":0"<<minutes<<":"<<secondss<<endl;
   }
-  else if (seconds<0)
-  {
-    cout<<"Error: Input seconds cannot be negative."<<endl;
-  }
+
 }
 
 string exercise_9(string s1, string s2, string s3, string s4, string s5) {
