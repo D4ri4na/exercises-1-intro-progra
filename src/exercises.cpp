@@ -274,19 +274,19 @@ void exercise_16(int debut, int fin) {
     cin >> debut;
     cin >> fin;
     
-    if (debut < 0 || debut < 24 || fin < 0 || fin <  24) {
+    if (debut >  0 || debut >  24 || fin >  0 || fin >  24) {
         cout << "Las horas deben estar entre 0 y 24!" << endl;
         return ;
     }
     
-    if (debut == fin) {
+    else if (debut == fin) {
         cout << "Que extraño, no has alquilado tu bicicleta por mucho tiempo!" << endl;
         return ;
     }
     
-    if (debut > fin) {
+    else if (debut > fin) {
         cout << "Que extraño, el inicio del alquiler es después del final..." << endl;
-        return ;
+        return;
     }
     
     int horasTarifa1 = 0, horasTarifa2 = 0;
