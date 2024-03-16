@@ -221,9 +221,9 @@ void exercise_12(string color1, int numb1,
                  string color3, int numb3,
                  string color4, int numb4) {
   // TODO: YOUR CODE HERE
-  bool match1 = (color1 == color4  color4 == "?") && (numb1 == numb4  numb4 == -1);
-     bool match2 = (color2 == color4  color4 == "?") && (numb2 == numb4  numb4 == -1);
-     bool match3 = (color3 == color4  color4 == "?") && (numb3 == numb4  numb4 == -1);
+  bool match1 = (color1 == color4 || color4 == "?") && (numb1 == numb4 || numb4 == -1);
+     bool match2 = (color2 == color4 || color4 == "?") && (numb2 == numb4 || numb4 == -1);
+     bool match3 = (color3 == color4 || color4 == "?") && (numb3 == numb4 || numb4 == -1);
 
      if (match1)
     {
