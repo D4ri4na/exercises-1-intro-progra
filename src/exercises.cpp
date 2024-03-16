@@ -324,4 +324,4 @@ void exercise_16(int debut, int fin) {
     return ;
 
 }
-}
+
