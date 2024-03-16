@@ -309,7 +309,7 @@ void exercise_16(int debut, int fin) {
     int horas_tarifa_2 = 0;
 
     while (hora_actual < fin) {
-        if ((hora_actual >= 0 && hora_actual < 7)  (hora_actual >= 17 && hora_actual <= 24)) {
+        if ((hora_actual >= 0 && hora_actual < 7) || (hora_actual >= 17 && hora_actual <= 24)) {
             horas_tarifa_1++;
         } else {
             horas_tarifa_2++;
@@ -330,5 +330,5 @@ void exercise_16(int debut, int fin) {
 
     cout << "El monto total a pagar es de " << costo_total << " boliviano(s)." << endl;
 }
-}
+
 
