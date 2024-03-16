@@ -249,8 +249,7 @@ string exercise_14(int number_of_docs) {
   // TODO: YOUR CODE HERE
    if(number_of_docs>=2)
   {
-    cout<<number_of_docs;
-    return" documentos encontrados.";
+    cout<<number_of_docs<<return" documentos encontrados.";
   }
   else if (number_of_docs==1)
   {
