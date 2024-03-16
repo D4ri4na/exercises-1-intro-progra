@@ -286,42 +286,50 @@ void exercise_15(int a, int b, int c) {
 
 void exercise_16(int debut, int fin) {
   // TODO: YOUR CODE HERE
-
-    
-    if (debut <  0 || debut >  24 || fin <  0 || fin  > 24) {
+ if (debut < 0  debut > 24  fin < 0  fin > 24) {
         cout << "Las horas deben estar entre 0 y 24!" << endl;
-        return ;
+        return;
     }
-    
-    else if (debut == fin) {
+
+    // Verificar si la hora de inicio es igual a la hora de finalización
+    if (debut == fin) {
         cout << "Que extraño, no has alquilado tu bicicleta por mucho tiempo!" << endl;
-        return ;
+        return;
     }
-    
-    else if (debut > fin) {
+
+    // Verificar si la hora de inicio es mayor que la hora de finalización
+    if (debut > fin) {
         cout << "Que extraño, el inicio del alquiler es después del final..." << endl;
         return;
     }
-    
-    int horasTarifa1 = 0, horasTarifa2 = 0;
-    int costoTotal = 0;
-    
-    for (int i = debut; i < fin; ++i) {
-        if ((i >= 0 && i < 7) || (i >= 17 && i < 24)) {
-            horasTarifa1++;
-        } else {
-            horasTarifa2++;
-        }
-    }
-    
-    costoTotal = horasTarifa1 + 2 * horasTarifa2;
-    
-    cout << "Has alquilado una bicicleta por" << endl;
-    cout << horasTarifa1 << " hora(s) con el tarifario de 1 boliviano(s)" << endl;
-    cout << horasTarifa2 << " hora(s) con el tarifario de 2 boliviano(s)" << endl;
-    cout << "El monto total a pagar es de " << costoTotal << " boliviano(s)." << endl;
-    
-    return ;
 
+    int costo_total = 0;
+    int hora_actual = debut;
+    int horas_tarifa_1 = 0;
+    int horas_tarifa_2 = 0;
+
+    while (hora_actual < fin) {
+        if ((hora_actual >= 0 && hora_actual < 7)  (hora_actual >= 17 && hora_actual <= 24)) {
+            horas_tarifa_1++;
+        } else {
+            horas_tarifa_2++;
+        }
+        hora_actual++;
+    }
+
+    // Mostrar el resultado con el formato esperado por las pruebas
+    cout << "Haz alquilado una bicicleta por" << endl;
+
+    if (horas_tarifa_1 > 0) {
+        cout << horas_tarifa_1 << " hora(s) con el tarifario de 1 boliviano(s)" << endl;
+        costo_total += horas_tarifa_1;
+    }
+    if (horas_tarifa_2 > 0) {
+        cout << horas_tarifa_2 << " hora(s) con el tarifario de 2 boliviano(s)" << endl;
+        costo_total += horas_tarifa_2 * 2;
+    }
+
+    cout << "El monto total a pagar es de " << costo_total << " boliviano(s)." << endl;
+}
 }
 
