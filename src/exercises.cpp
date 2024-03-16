@@ -312,10 +312,9 @@ void exercise_16(int debut, int fin) {
     
     if (debut < 0 || debut > 24) {
         cout << "Hora de inicio inválida. Debe estar entre 0 y 24." << endl;
-        return 0;
+
     }else if (debut > fin) {
         cout << "Hora de inicio inválida. Debe ser menor a la hora fin" << endl;
-        return 0;
     }
 
     
@@ -325,16 +324,13 @@ void exercise_16(int debut, int fin) {
     // Validar la hora de fin
     if (fin < 0 || fin > 24) {
         cout << "Hora de finalización inválida. Debe estar entre 0 y 24." << endl;
-        return 0;
     }else if (fin < debut) {
         cout << "Hora de finalización inválida. Debe ser mayor a la hora inicio" << endl;
-        return 0;
+
     }
 
     // Calcular y mostrar el precio del alquiler
     double precio = calcularPrecioAlquiler(debut, fin);
     cout << "El precio del alquiler es: $" << precio << endl;
-
-    return 0;
 }
 }
