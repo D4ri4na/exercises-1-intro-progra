@@ -286,51 +286,42 @@ void exercise_15(int a, int b, int c) {
 
 void exercise_16(int debut, int fin) {
   // TODO: YOUR CODE HERE
-   double calcularPrecioAlquiler(int horaInicio, int horaFin) {
-    const int TARIFA_TDIA = 2; // Precio por turno de 8 horas
-    const int TARIFA_TNOCHE = 1; // Precio por turno de 8 horas
-    int horasAlquiladas = horaFin - horaInicio;
-    // Asegurarse de que el tiempo de alquiler no sea negativo
-    if (horasAlquiladas < 0){
-        horasAlquiladas += 24;
-    }else if (horasAlquiladas == 0){
-        horasAlquiladas = 0;
-    }
-    int turnosCompletos = horasAlquiladas / 8;
-    double precioTotal = turnosCompletos * TARIFA_TURNO;
-
-    return precioTotal;
-}
- {
-    
-    int debut, fin;
-
-   
-    cout << "Ingrese la hora de inicio (0 a 24): ";
-    cin >> debut;
 
     
-    if (debut < 0 || debut > 24) {
-        cout << "Hora de inicio inválida. Debe estar entre 0 y 24." << endl;
-
-    }else if (debut > fin) {
-        cout << "Hora de inicio inválida. Debe ser menor a la hora fin" << endl;
+    if (debut >  0 || debut <  24 || fin >  0 || fin  < 24) {
+        cout << "Las horas deben estar entre 0 y 24!" << endl;
+        return ;
     }
-
     
-    cout << "Ingrese la hora de finalización (0 a 24): ";
-    cin >> fin;
-
-    // Validar la hora de fin
-    if (fin < 0 || fin > 24) {
-        cout << "Hora de finalización inválida. Debe estar entre 0 y 24." << endl;
-    }else if (fin < debut) {
-        cout << "Hora de finalización inválida. Debe ser mayor a la hora inicio" << endl;
-
+    else if (debut == fin) {
+        cout << "Que extraño, no has alquilado tu bicicleta por mucho tiempo!" << endl;
+        return ;
     }
+    
+    else if (debut > fin) {
+        cout << "Que extraño, el inicio del alquiler es después del final..." << endl;
+        return;
+    }
+    
+    int horasTarifa1 = 0, horasTarifa2 = 0;
+    int costoTotal = 0;
+    
+    for (int i = debut; i < fin; ++i) {
+        if ((i >= 0 && i < 7) || (i >= 17 && i < 24)) {
+            horasTarifa1++;
+        } else {
+            horasTarifa2++;
+        }
+    }
+    
+    costoTotal = horasTarifa1 + 2 * horasTarifa2;
+    
+    cout << "Has alquilado una bicicleta por" << endl;
+    cout << horasTarifa1 << " hora(s) con el tarifario de 1 boliviano(s)" << endl;
+    cout << horasTarifa2 << " hora(s) con el tarifario de 2 boliviano(s)" << endl;
+    cout << "El monto total a pagar es de " << costoTotal << " boliviano(s)." << endl;
+    
+    return ;
 
-    // Calcular y mostrar el precio del alquiler
-    double precio = calcularPrecioAlquiler(debut, fin);
-    cout << "El precio del alquiler es: $" << precio << endl;
 }
 }
