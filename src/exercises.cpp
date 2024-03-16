@@ -286,7 +286,7 @@ void exercise_15(int a, int b, int c) {
 
 void exercise_16(int debut, int fin) {
   // TODO: YOUR CODE HERE
- if (debut < 0  debut > 24  fin < 0  fin > 24) {
+ if (debut < 0 || debut > 24 || fin < 0 || fin > 24) {
         cout << "Las horas deben estar entre 0 y 24!" << endl;
         return;
     }
@@ -317,7 +317,6 @@ void exercise_16(int debut, int fin) {
         hora_actual++;
     }
 
-    // Mostrar el resultado con el formato esperado por las pruebas
     cout << "Haz alquilado una bicicleta por" << endl;
 
     if (horas_tarifa_1 > 0) {
