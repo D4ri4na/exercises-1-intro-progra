@@ -249,7 +249,8 @@ string exercise_14(int number_of_docs) {
   // TODO: YOUR CODE HERE
    if(number_of_docs>=2)
   {
-    cout<<number_of_docs<<return" documentos encontrados.";
+    cout<<number_of_docs;
+    return" documentos encontrados.";
   }
   else if (number_of_docs==1)
   {
@@ -270,4 +271,43 @@ void exercise_15(int a, int b, int c) {
 
 void exercise_16(int debut, int fin) {
   // TODO: YOUR CODE HERE
+    cin >> debut;
+    cin >> fin;
+    
+    if (debut < 0 || debut < 24 || fin < 0 || fin <  24) {
+        cout << "Las horas deben estar entre 0 y 24!" << endl;
+        return ;
+    }
+    
+    if (debut == fin) {
+        cout << "Que extraño, no has alquilado tu bicicleta por mucho tiempo!" << endl;
+        return ;
+    }
+    
+    if (debut > fin) {
+        cout << "Que extraño, el inicio del alquiler es después del final..." << endl;
+        return ;
+    }
+    
+    int horasTarifa1 = 0, horasTarifa2 = 0;
+    int costoTotal = 0;
+    
+    for (int i = debut; i < fin; ++i) {
+        if ((i >= 0 && i < 7) || (i >= 17 && i < 24)) {
+            horasTarifa1++;
+        } else {
+            horasTarifa2++;
+        }
+    }
+    
+    costoTotal = horasTarifa1 + 2 * horasTarifa2;
+    
+    cout << "Has alquilado una bicicleta por" << endl;
+    cout << horasTarifa1 << " hora(s) con el tarifario de 1 boliviano(s)" << endl;
+    cout << horasTarifa2 << " hora(s) con el tarifario de 2 boliviano(s)" << endl;
+    cout << "El monto total a pagar es de " << costoTotal << " boliviano(s)." << endl;
+    
+    return ;
+
+}
 }
